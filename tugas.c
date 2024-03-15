@@ -6,7 +6,7 @@
 #define MIN_LENGTH 1945
 
 void lessThanRequired (int* length){
-        printf("The length of your text is less than specified, please update your text\n");
+    printf("The length of your text is less than specified, please update your text\n");
     printf("Length Before : %d\n", *length);
     *length = MIN_LENGTH;
     printf("The Length is updated to %d\n", *length);
