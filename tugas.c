@@ -91,7 +91,5 @@ int main() {
 
     functions[selectOption](&lengthOfText);
 
-    printf("\nThe Lenght is updated to %d", lengthOfText);
-
     return 0;
 }
