@@ -5,15 +5,22 @@
 #define MAX_LENGTH 2024
 #define MIN_LENGTH 1945
 
-void lessThanRequired (){
-    // TODO
+void lessThanRequired (int* length){
+        printf("The length of your text is less than specified, please update your text\n");
+    printf("Length Before : %d\n", *length);
+    *length = MIN_LENGTH;
+    printf("The Length is updated to %d\n", *length);
 }
 
-void equalThanRequired (){
-    // TODO
+void equalThanRequired (int* length){
+    printf("Thank you, Your text length is correct\n");
 }
 
-void moreThanRequired (){
+void moreThanRequired (int* length){
+    printf("Your text is too long, please reduce the text\n");
+    printf("Length Before : %d\n", *length);
+    *length = MAX_LENGTH;
+    printf("The Length is updated to %d\n", *length);
     // TODO
 }
 
@@ -78,6 +85,11 @@ int main() {
     // The length of your text is less than specified, please update your text
     // Length Before : 312
     // The Lenght is updated to 2023
+
+    lengthOfText = strlen(text);
+    void (*functions[3])(int*) = {lessThanRequired, equalThanRequired, moreThanRequired};
+
+    functions[selectOption](&lengthOfText);
 
     printf("\nThe Lenght is updated to %d", lengthOfText);
 
